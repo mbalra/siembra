@@ -1,0 +1,398 @@
+/*----------------------------------VARIABLES--------------------------*/
+
+:root{
+    --clr-pri:#015249;
+    --clr-sec:#57BC90;
+    --clr-cla:#E5E5E5;
+    --clr-osc:#000;
+}
+
+/*----------------------------------RESETEO--------------------------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+main{
+    background: var(--clr-cla);
+}
+/*----------------------------------TIPOGRAFIA--------------------------*/
+
+    
+h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 2.5rem;
+    color:var(--clr-pri);
+  }
+
+/*----------------------------------NAVBAR--------------------------*/
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+	align-items: center;
+	position: absolute;
+	width: 100%;
+	z-index: 100;
+}
+.navbarW{
+	width: 95%;
+	height: 110px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid white;
+}
+
+.navbarStart{
+	display: flex;
+	justify-content: flex-start;
+}
+.navbarCenter{
+	display: flex;
+	justify-content: center;
+}
+.navbarEnd{
+	display: flex;
+	justify-content: flex-end;
+}
+.downBar{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.navbarTop{
+	display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+.navbarHam{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	margin-left: 5px;
+}
+.navbarNameBtn{
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+	align-items: center;
+}
+.navbarContactSearch{
+	width: 40%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+}
+.fa-search{
+	margin: 0px 10px;
+}
+.navbarRegister{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0px 5px;
+
+}
+.navbarTitle{
+	font-size: 20px;
+	margin: 0;
+	font-family: 'DM Sans', sans-serif;
+	font-weight: 400;
+}
+.navbarRegisterT{
+	font-size: 1.4rem;
+	font-family: 'DM Sans', sans-serif;
+	font-weight: 700;
+    padding: .4em 2.5em;
+    background: var(--clr-sec);
+    color:var(--clr-pri);
+   border-style: none;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.631);
+}
+.navbarLogo{
+    width: 211px;
+	height: 66px;
+}
+.border{  
+    margin: 0;
+}
+
+/*--------------------------MENU HAMBURGUESA------------------*/
+.ham {
+	display: block;
+	cursor: pointer;
+	border: none;
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	transition: 0.2s 0.1s;
+}
+
+.ham:hover {
+	transform: rotate(360deg);
+}
+
+.ham span {
+	display: block;
+	height: 5px;
+	width: 27px;
+	margin: 4px auto;
+	border-radius: 1px;
+}
+
+@keyframes muestraMenu {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+/* ANIMACIONES HEADER MENU HAMBURGUESA */
+ /*.navbarHamLinks{
+      display: none;
+    */ 
+    .navbarHamLinks.activado {
+        display: flex;
+        animation: muestraMenu 350ms ease-in-out both;
+        
+    }
+    .br-1.animado {
+        transform: rotate(-45deg) translate(-10px, 8px);
+    }
+    
+    .br-2.animado {
+        opacity: 0;
+    }
+    
+    .br-3.animado {
+        transform: rotate(45deg) translate(-10px, -8px);
+    }
+    .menu-area ul{
+        list-style: none;
+    }
+    .menu-area{
+        text-align: center;
+    }
+    .menu-area li:hover{
+        background: transparent;
+    }
+    .menu-area > ul {
+        list-style: none;
+        margin: 0;
+        display: flex;
+        width: 100%;
+    }
+    .menu-area > ul > li{
+        position: relative;
+        cursor: pointer;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        margin: 0px 40px;
+    }
+    .menu-area > ul > li > a, .dropdown li a {
+        text-decoration: none;
+    }
+    .submenuTitle{
+        margin:0;
+    }
+    .dropdown{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100.6%;
+        padding: 0;
+    }
+    .dropdown li{
+        border: 1px solid black;
+        display: none;
+    }
+    .menu-area li:hover > .dropdown li{
+        display: block;
+    }
+    .fa-size{
+        font-size: 20px;
+        color: black;
+    }
+    /*-------------------------------HERO-----------------------*/
+    .videoContainer{
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .videoIndex{
+        width: 100%;
+        height: 1080px;
+        position: absolute;
+        z-index: 0;
+    }
+    .videoIndexLogo{
+        width: 1005px;
+        height: 314px;
+        text-align: center;
+    }
+    .videoIndexLogoContainer{
+        z-index: 1;
+        position: absolute;
+        width: 95%;
+        display: flex;
+        height: 1080px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+       /*-------------------------------FIRST CARD----------------------*/
+       .firstcard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2em;
+      }
+  .firstcard h2{
+      margin: 7em 0 3em 0;
+    }
+      
+      .fcard {
+        width: 90%;
+        height: 560px;
+        display: flex;
+        justify-content: center;
+      }
+      
+      .fcard-img {
+        background: green;
+        height: 581px;
+        width: 85%;
+        padding: .5em;
+        align-self: center;
+        border-radius: 20px;
+        background-image: url(../media/fcard.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      
+      .fcard-txt {
+        background: #015249;
+        padding: 2.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 1.3rem;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        text-align: center;
+      }
+      
+      .autor {
+        margin-left: 520px;
+      }
+
+
+ /*-------------------------------SECOND CARD----------------------*/
+
+           .secondcard{
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+               gap: 4em;
+               margin: 2em 4em;
+           }
+
+           .scard-container{
+               display: grid;
+               grid-template-columns: repeat(4,auto);
+           }
+
+           .scard{
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+               padding: 2em;
+            
+           }
+
+           .scard-txt{
+               display: flex;
+               flex-direction: column;
+               gap: 1em;
+               justify-content: center;
+               align-items: center;
+               background: var(--clr-pri);
+               color:var(--clr-cla);
+               padding: 2em;
+               border-end-start-radius: 20px;
+               border-end-end-radius: 20px;
+            }
+
+            
+           .scard-txt a{
+                 margin-right: -200px ;
+                 text-decoration: underline;
+         }
+
+            .scard-img{
+                flex-basis: 270px;
+                width: 100%;
+                padding: .6em;
+                border-radius: 20px;
+                margin-bottom: -1em;
+                z-index: 200;
+                position: relative;
+        
+            }
+
+            #card1{
+                background-image: url(../media/card1.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            #card2{
+                background-image: url(../media/card2.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            #card3{
+                background-image: url(../media/card3.png);
+                background-size: cover;
+                background-repeat: no-repeat; 
+            }
+            #card4{
+                background-image: url(../media/card4.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            .etiqueta{
+                background:#F7F7F7;
+                display: inline-block;
+                padding: .3em .6em;
+                border-radius: 50px;
+                position: absolute;
+             right: 20px;
+             bottom: 5px;
+           
+            }
