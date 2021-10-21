@@ -5,6 +5,7 @@
     --clr-sec:#57BC90;
     --clr-cla:#E5E5E5;
     --clr-osc:#000;
+    --clr-gra:#FFFFFF;
 }
 
 /*----------------------------------RESETEO--------------------------*/
@@ -15,6 +16,7 @@
     list-style: none;
     text-decoration: none;
     color: inherit;
+    font-family: 'DM Sans', sans-serif;
 }
 
 
@@ -32,6 +34,11 @@ main{
 h2 {
     font-family: 'DM Sans', sans-serif;
     font-size: 2.5rem;
+    color:var(--clr-pri);
+  }
+  h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 2rem;
     color:var(--clr-pri);
   }
 
@@ -71,47 +78,18 @@ h2 {
 	flex-direction: row;
 	align-items: center;
 }
-.navbarTop{
-	display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-}
-.navbarHam{
-    width: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-	margin-left: 5px;
-}
-.navbarNameBtn{
-    display: flex;
-    justify-content: flex-start;
-    width: 50%;
-	align-items: center;
-}
-.navbarContactSearch{
-	width: 40%;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: flex-end;
-}
-.fa-search{
-	margin: 0px 10px;
-}
 .navbarRegister{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin: 0px 5px;
-
 }
 .navbarTitle{
 	font-size: 20px;
 	margin: 0;
 	font-family: 'DM Sans', sans-serif;
 	font-weight: 400;
+    color: var(--clr-cla);
 }
 .navbarRegisterT{
 	font-size: 1.4rem;
@@ -232,7 +210,7 @@ h2 {
     }
     .fa-size{
         font-size: 20px;
-        color: black;
+        color: var(--clr-cla);
     }
     /*-------------------------------HERO-----------------------*/
     .videoContainer{
@@ -307,6 +285,7 @@ h2 {
       
       .autor {
         margin-left: 520px;
+        font-family: 'IM FELL Double Pica', sans-serif;
       }
 
 
@@ -396,3 +375,129 @@ h2 {
              bottom: 5px;
            
             }
+ /*-------------------------------THIRD CARD----------------------*/
+.thirdcard{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8em;
+}
+.tcard-container{
+    display: grid;
+    grid-template-areas: "circular bar" "report report";
+    text-align: center;
+    gap: 2em;
+}
+#tcard-circular{
+    grid-area: circular;
+}
+#tcard-bar{
+    grid-area: bar;
+}
+#tcard-report{
+    grid-area: report;
+}
+.tcard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    gap: 2em;
+}
+.tcard-graph{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    background: var(--clr-gra);
+    color:var(--clr-pri);
+    padding: 2em;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.07);
+    border-radius: 15px;
+ }
+ .graphReport{
+     width: 15rem;
+     height: 15rem;
+ }
+ .tcard-report{
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
+    justify-content: center;
+    align-items: center;
+    background: var(--clr-gra);
+    color:var(--clr-pri);
+    padding: 2em;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.07);
+    border-radius: 15px;
+    font-weight: 500;
+ }
+ .tcard-txt1{
+     width: 50%;
+     font-size: 1.6rem;
+     display: flex;
+     flex-direction: column;
+     gap: 0.5em;
+ }
+ .tcard-txt2{
+    width: 50%;
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    text-decoration: underline;
+    gap: 0.5em;
+}
+.tcard-empty{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--clr-gra);
+    color:var(--clr-pri);
+    padding: 2em;
+    margin: 1em;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.07);
+    border-radius: 15px;
+    font-weight: 500;
+    height: 14.5em;
+    width: 40em;
+}
+footer{
+    display: flex;
+    background: var(--clr-pri);
+    color: var(--clr-cla);
+    justify-content: center;
+    align-items: center;
+    height: 9em;
+    padding: 0em 2em;
+}
+.logoFooter{
+    height: 5em;
+    width: 18em;
+}
+.footer-container{
+    width: 33%;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+.footer-txt{
+    text-align: center;
+}
+.footer-logo{
+    justify-content: center;
+    border-right: 1px white solid;
+    border-left: 1px white solid;
+}
+.footer-links{
+    justify-content: flex-start;
+    padding-left: 4em;
+}
+.ft-links li{
+    margin-top: 0.3em;
+}
