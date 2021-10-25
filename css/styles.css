@@ -239,142 +239,154 @@ h2 {
         align-items: center;
     }
     
-       /*-------------------------------FIRST CARD----------------------*/
-       .firstcard {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 2em;
-      }
-  .firstcard h2{
-      margin: 7em 0 3em 0;
+       *-------------------------------FIRST CARD----------------------*/
+.firstcard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em;
+}
+
+.firstcard h2 {
+    margin: 7em 0 3em 0;
+}
+
+.fcard {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.fcard-img {
+    background-image: url(../media/fcard.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 550px;
+    width: 90%;
+    margin-left: -5em;
+    border-radius: 20px;
+}
+
+.fcard-txt {
+    background: #015249;
+    padding: 2.5em 5.5em 2.5em 2.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.3rem;
+    text-align: center;
+
+
+}
+
+.autor {
+    margin-top: 29px;
+    margin-left: 15em;
+}
+
+
+/*-------------------------------SECOND CARD----------------------*/
+
+.secondcard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3em;
+}
+
+    .secondcard h2 {
+      text-align: center;
+    
     }
-      
-      .fcard {
-        width: 90%;
-        height: 560px;
-        display: flex;
-        justify-content: center;
-      }
-      
-      .fcard-img {
-        background: green;
-        height: 581px;
-        width: 85%;
-        padding: .5em;
-        align-self: center;
-        border-radius: 20px;
-        background-image: url(../media/fcard.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-      
-      .fcard-txt {
-        background: #015249;
-        padding: 2.5em;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        font-size: 1.3rem;
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px;
-        text-align: center;
-      }
-      
-      .autor {
-        margin-left: 520px;
-        font-family: 'IM FELL Double Pica', sans-serif;
-      }
 
 
- /*-------------------------------SECOND CARD----------------------*/
+.scard-container {
+    display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5em;
+    margin: 2em;
 
-           .secondcard{
-               display: flex;
-               flex-direction: column;
-               justify-content: center;
-               align-items: center;
-               gap: 4em;
-               margin: 2em 4em;
-           }
+}
 
-           .scard-container{
-               display: grid;
-               grid-template-columns: repeat(4,auto);
-           }
+.scard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden; 
 
-           .scard{
-               display: flex;
-               flex-direction: column;
-               justify-content: center;
-               align-items: center;
-               padding: 2em;
-            
-           }
 
-           .scard-txt{
-               display: flex;
-               flex-direction: column;
-               gap: 1em;
-               justify-content: center;
-               align-items: center;
-               background: var(--clr-pri);
-               color:var(--clr-cla);
-               padding: 2em;
-               border-end-start-radius: 20px;
-               border-end-end-radius: 20px;
-            }
+}
 
-            
-           .scard-txt a{
-                 margin-right: -200px ;
-                 text-decoration: underline;
-         }
+.scard-txt {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    background: var(--clr-pri);
+    color: var(--clr-cla);
+    padding: 2em;
+    border-end-end-radius:20px ;
+border-end-start-radius: 20px;
 
-            .scard-img{
-                flex-basis: 270px;
-                width: 100%;
-                padding: .6em;
-                border-radius: 20px;
-                margin-bottom: -1em;
-                z-index: 200;
-                position: relative;
-        
-            }
+}
 
-            #card1{
-                background-image: url(../media/card1.png);
-                background-size: cover;
-                background-repeat: no-repeat;
-            }
-            #card2{
-                background-image: url(../media/card2.png);
-                background-size: cover;
-                background-repeat: no-repeat;
-            }
-            #card3{
-                background-image: url(../media/card3.png);
-                background-size: cover;
-                background-repeat: no-repeat; 
-            }
-            #card4{
-                background-image: url(../media/card4.png);
-                background-size: cover;
-                background-repeat: no-repeat;
-            }
 
-            .etiqueta{
-                background:#F7F7F7;
-                display: inline-block;
-                padding: .3em .6em;
-                border-radius: 50px;
-                position: absolute;
-             right: 20px;
-             bottom: 5px;
-           
-            }
+.scard-txt a {
+    margin-right: -200px;
+    text-decoration: underline;
+}
+
+.scard-img {
+    flex-basis: 270px;
+	width: 100%;
+    z-index: 200;
+    position: relative;
+}
+
+#card1 {
+    background-image: url(../media/card1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+}
+
+#card2 {
+    background-image: url(../media/card2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-position-x: 30%;
+}
+
+#card3 {
+    background-image: url(../media/card3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 70%;
+}
+
+#card4 {
+    background-image: url(../media/card4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.etiqueta {
+    background: #F7F7F7;
+    display: inline-block;
+    padding: .3em .6em;
+    border-radius: 50px;
+    position: absolute;
+    right: 20px;
+    bottom: 5px;
+
+}
  /*-------------------------------THIRD CARD----------------------*/
 .thirdcard{
     display: flex;
