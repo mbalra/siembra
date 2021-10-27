@@ -19,63 +19,48 @@
 </head>
 
 <body>
+    <!-------------------------- HEADER ---------------------->
     <header>
-        <nav class="navbar">
-            <div class="navbarW">
-                <div class="navbarIn navbarStart">
-                    <img class="navbarLogo" src="media/Siembralogo-02.png">
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="navbarIn navbarCenter">
-                    <div class="menu-area navbarHamLinks">
-                        <ul>
-                            <li class="border navbarTitle"><a href="">Inicio</a></li>
-                            <li class="border navbarTitle"><a href="">
-                                    <div class="downBar">
-                                        Proyectos<i class="fas fa-chevron-down fa-size"></i>
-                                    </div>
-                                </a>
-                                <!-- Submenus -->
-                                <ul class="dropdown">
-                                    <li class="submenuTitle"><a href="">Informes</a></li>
-                                    <li class="submenuTitle"><a href="">Investigación</a></li>
-                                </ul>
-                            </li>
-                            <li class="border navbarTitle"><a href="">
-                                    <div class="downBar">
-                                        Publicaciones<i class="fas fa-chevron-down fa-size"></i>
-                                    </div>
-                                </a>
-                                <!-- Submenus -->
-                                <ul class="dropdown">
-                                    <li class="submenuTitle"><a href="">Informes</a></li>
-                                    <li class="submenuTitle"><a href="">Investigación</a></li>
-                                </ul>
-                            </li>
-                            <li class="border navbarTitle"><a href="">
-                                    <div class="downBar">
-                                        Nosotros<i class="fas fa-chevron-down fa-size"></i>
-                                    </div>
-                                </a>
-                                <!-- Submenus -->
-                                <ul class="dropdown">
-                                    <li class="submenuTitle"><a href="">Misión / Visión</a></li>
-                                    <li class="submenuTitle"><a href="">Contacto</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="navbarIn navbarEnd">
-                    <div class="navbarRegister">
-                        <button class="navbarRegisterT">Ser parte</button>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <!-- Fin del NAV -->
-    </header>
+        <section class="logo">
+<img src="media/Siembralogo-02.png" alt="">
+        </section>
+       <nav>
+        <label for="menu-dropdown" class="menu menu-sm">
+            <i class="fas fa-bars"></i></a>
+        </label>
+        <input type="checkbox" id="menu-dropdown" hidden>
 
+        <ul class="menu menu-md">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Proyectos</a>
+                <i class="fas fa-chevron-down fa-size"></i>
+                    <ul class="submenu">
+                    <li><a href="#">Informes</a></li>
+                    <li><a href="#">Investigacion</a></li>
+            </ul>
+            </li>
+            <li><a href="#">Publicaciones</a>
+                <i class="fas fa-chevron-down fa-size"></i>
+                        <ul class="submenu">
+                    <li><a href="#">Informes</a></li>
+                    <li><a href="#">Investigacion</a></li>
+                </ul>
+            </li>
+      
+            <li ><a href="#">Nosotros</a>
+                <i class="fas fa-chevron-down fa-size"></i>
+                <ul class="submenu">
+                    <li><a href="#">Mision</a></li>
+                    <li><a href="#">Vision</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </li>
+        </ul>
+       </nav>
+       <section class="boton">
+<button class="btn-pri">Ser parte</button>
+       </section>
+    </header>
     <!----------------------HERO--------------------------->
     <main>
         <div class="videoContainer">
@@ -195,7 +180,8 @@
 
     <footer>
         <div class="footer-container footer-txt">
-            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis
+                enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
         </div>
         <div class="footer-container footer-logo"><img src="media/Siembralogo-02.png" class="logoFooter"></div>
         <div class="footer-container footer-links">
