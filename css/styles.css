@@ -254,6 +254,8 @@ header nav .menu-link:hover {
     color: white;
     font-size: 1.3rem;
     text-align: center;
+    border-bottom-left-radius:20px ;
+border-top-left-radius:20px ;
 
 
 }
