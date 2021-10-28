@@ -365,7 +365,7 @@ header nav .menu-link:hover {
 
 }
 
-/*-------------------------------THIRD CARD----------------------*/
+/*-------------------------------THIRD CARD-------------------------------*/
 .thirdcard {
     display: flex;
     flex-direction: row;
@@ -374,13 +374,19 @@ header nav .menu-link:hover {
     gap: 8em;
 }
 
-.tcard-container {
+.tcard-grid {
     display: grid;
-    grid-template-areas: "circular bar""report report";
+    grid-template-areas: "knowtitle knowtitle ourtitle ourtitle"
+    "circular bar publication1 publication1"
+    "circular bar publication1 publication1"
+    "circular bar publication2 publication2"
+    "report report publication2 publication2";
     text-align: center;
     gap: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* grid-template-columns: 20% 20% 40%; */
+    
 }
-
 #tcard-circular {
     grid-area: circular;
 }
@@ -392,7 +398,18 @@ header nav .menu-link:hover {
 #tcard-report {
     grid-area: report;
 }
-
+#tcard-publicationOne {
+    grid-area: publication1;
+}
+#tcard-publicationTwo {
+    grid-area: publication2;
+}
+#tcard-know{
+    grid-area: knowtitle;
+}
+#tcard-our{
+    grid-area: ourtitle;
+}
 .tcard {
     display: flex;
     flex-direction: column;
@@ -451,22 +468,65 @@ header nav .menu-link:hover {
     gap: 0.5em;
 }
 
-.tcard-empty {
+.tcard-publication {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 1em;
     justify-content: center;
     align-items: center;
     background: var(--clr-gra);
     color: var(--clr-pri);
     padding: 2em;
-    margin: 1em;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.07);
     border-radius: 15px;
-    font-weight: 500;
-    height: 14.5em;
-    width: 40em;
+    text-align: start;
 }
-
+.tcard-img{
+    width: 45rem;
+    height: 20rem;
+    display: flex;
+}
+.tcard-publicationtxt{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 2rem;
+    text-align: justify;
+}
+.paragraphpublication{
+    font-size: 18px;
+    color: var(--clr-osc);
+}
+.tcard-publicationlink{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    text-decoration: underline;
+}
+/*-------------------------------RESPONSIVE GRIDS-------------------------------*/
+@media (min-width:768px) and (max-width:1024px) {
+    .tcard-grid{
+        grid-template-areas:"knowtitle knowtitle"
+                            "circular bar"
+                            "report report"
+                            "ourtitle ourtitle"
+                            "publication1 publication1"
+                            "publication2 publication2";
+        gap: 6em;
+    }
+}
+@media (max-width:767px){
+    .tcard-grid{
+        grid-template-areas:"knowtitle"
+                            "circular"
+                            "bar"
+                            "report"
+                            "ourtitle"
+                            "publication1"
+                            "publication2";
+    }
+}
+/*-------------------------------FOOTER-------------------------------*/
 footer {
     display: flex;
     background: var(--clr-pri);
