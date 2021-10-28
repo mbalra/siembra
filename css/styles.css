@@ -236,7 +236,7 @@ header nav .menu-link:hover {
 }
 
 .firstcard h2 {
-    margin: 1em 0 1em 0;
+    margin: 5em 0 2em 0;
 }
 
 .fcard {
@@ -245,7 +245,7 @@ header nav .menu-link:hover {
     display: flex;
     flex-flow: row;
     text-align: left;
-    max-width: 80%;
+   width: 90%;
     border-radius: 0.3em;
     overflow: hidden;
 
@@ -260,7 +260,7 @@ header nav .menu-link:hover {
 }
 
 .fcard-txt {
-    font-size: .8rem;
+    font-size: 1.2rem;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -275,6 +275,7 @@ header nav .menu-link:hover {
 .autor {
     margin-top: 29px;
     margin-left: 15em;
+    font-style: italic;
 }
 
 
