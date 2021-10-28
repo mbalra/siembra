@@ -202,14 +202,15 @@ header nav .menu-link:hover {
     width: 100%;
     height: 100vh;
 }
-
 .videoIndex {
     width: 100%;
     height: 1080px;
     position: absolute;
     z-index: 0;
 }
-
+.videoSiembra{
+    width: 100%;
+}
 .videoIndexLogo {
     width: 1005px;
     height: 314px;
