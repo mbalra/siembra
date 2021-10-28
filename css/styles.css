@@ -58,6 +58,7 @@ h3 {
     font-size: 1.1rem;
     font-weight: 800;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.741);
+    cursor: pointer;
 }
 
 .fas{
@@ -72,7 +73,9 @@ h3 {
 
 .logo{
     max-width: 15%;
-
+}
+.logosize{
+    width: 10rem;
 }
 header {
     position: sticky;
@@ -98,6 +101,8 @@ header {
 .menu li {
     position: relative;
     font-size: 1.1rem;
+    display: flex;
+    align-items: center;
 }
 
 .menu>li a {
@@ -138,12 +143,15 @@ header {
 }
 
 .menu li:hover>ul {
-    display: block;
+    display: flex;
+    position: absolute;
     z-index: 10000;
+    flex-direction: column;
+    margin-top: 140px;
 }
 
 header nav input[type=checkbox]:checked~.menu-md {
-    position: absolute;
+    position: relative;
     top: 25%;
     right: 0;
     left: 0;
@@ -151,7 +159,7 @@ header nav input[type=checkbox]:checked~.menu-md {
     flex-flow: column;
     align-items: flex-end;
     gap: .1em;
-    background: white;
+    background: var(--clr-pri);
     border-bottom-left-radius: 0.5em;
     animation: scale-in-ver-top 300ms both;
 }
@@ -177,7 +185,6 @@ header nav .menu-link:hover {
     header nav .menu-sm {
         display: none;
     }
-
     header nav .menu-md {
         display: flex;
         justify-content: flex-end;
@@ -185,7 +192,11 @@ header nav .menu-link:hover {
         font-size: 1rem;
     }
 }
-
+@media only screen and (max-width: 749px){
+    header .boton {
+        display: none;
+    }
+}
 /*-------------------------------HERO-----------------------*/
 .videoContainer {
     width: 100%;
@@ -367,7 +378,7 @@ border-top-left-radius:20px ;
 
 }
 
-/*-------------------------------THIRD CARD----------------------*/
+/*-------------------------------THIRD CARD-------------------------------*/
 .thirdcard {
     display: flex;
     flex-direction: row;
@@ -376,13 +387,19 @@ border-top-left-radius:20px ;
     gap: 8em;
 }
 
-.tcard-container {
+.tcard-grid {
     display: grid;
-    grid-template-areas: "circular bar""report report";
+    grid-template-areas: "knowtitle knowtitle ourtitle ourtitle"
+    "circular bar publication1 publication1"
+    "circular bar publication1 publication1"
+    "circular bar publication2 publication2"
+    "report report publication2 publication2";
     text-align: center;
     gap: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* grid-template-columns: 20% 20% 40%; */
+    
 }
-
 #tcard-circular {
     grid-area: circular;
 }
@@ -394,14 +411,20 @@ border-top-left-radius:20px ;
 #tcard-report {
     grid-area: report;
 }
-
+#tcard-publicationOne {
+    grid-area: publication1;
+}
+#tcard-publicationTwo {
+    grid-area: publication2;
+}
+#tcard-know{
+    grid-area: knowtitle;
+}
+#tcard-our{
+    grid-area: ourtitle;
+}
 .tcard {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 2em;
-    gap: 2em;
 }
 
 .tcard-graph {
@@ -453,22 +476,66 @@ border-top-left-radius:20px ;
     gap: 0.5em;
 }
 
-.tcard-empty {
+.tcard-publication {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 1em;
     justify-content: center;
     align-items: center;
     background: var(--clr-gra);
     color: var(--clr-pri);
     padding: 2em;
-    margin: 1em;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.07);
     border-radius: 15px;
-    font-weight: 500;
-    height: 14.5em;
-    width: 40em;
+    text-align: start;
 }
-
+.tcard-img{
+    width: 45rem;
+    height: 20rem;
+    display: flex;
+}
+.tcard-publicationtxt{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 2rem;
+    text-align: justify;
+}
+.paragraphpublication{
+    font-size: 18px;
+    color: var(--clr-osc);
+}
+.tcard-publicationlink{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    text-decoration: underline;
+}
+/*-------------------------------RESPONSIVE GRIDS-------------------------------*/
+/* Tablet */
+@media (min-width:768px) and (max-width:1024px) {
+    .tcard-grid{
+        grid-template-areas:"knowtitle knowtitle"
+                            "circular bar"
+                            "report report"
+                            "ourtitle ourtitle"
+                            "publication1 publication1"
+                            "publication2 publication2";
+    }
+}
+/* Mobile */
+@media (max-width:767px){
+    .tcard-grid{
+        grid-template-areas:"knowtitle"
+                            "circular"
+                            "bar"
+                            "report"
+                            "ourtitle"
+                            "publication1"
+                            "publication2";
+    }
+}
+/*-------------------------------FOOTER-------------------------------*/
 footer {
     display: flex;
     background: var(--clr-pri);
