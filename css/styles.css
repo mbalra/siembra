@@ -232,17 +232,22 @@ header nav .menu-link:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3em;
-    width: 90%;
+    padding: 2em 0;
 }
 
 .firstcard h2 {
-    margin: 7em 0 3em 0;
+    margin: 1em 0 1em 0;
 }
 
 .fcard {
+    background: var(--clr-pri);
+    color: white;
     display: flex;
-    flex-direction: row;
+    flex-flow: row;
+    text-align: left;
+    max-width: 80%;
+    border-radius: 0.3em;
+    overflow: hidden;
 
 }
 
@@ -250,26 +255,21 @@ header nav .menu-link:hover {
     background-image: url(../media/fcard.png);
     background-repeat: no-repeat;
     background-size: cover;
+    flex: 1 0 50px;
     min-height: 550px;
-    width: 90%;
-    margin-left: -5em;
-    border-radius: 20px;
 }
 
 .fcard-txt {
-    background: #015249;
-    padding: 2.5em 5.5em 2.5em 2.5em;
+    font-size: .8rem;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
-    font-size: 1.3rem;
-    text-align: center;
+    align-self: stretch;
+    padding: 2em 1.7em;
     border-bottom-left-radius:20px ;
-border-top-left-radius:20px ;
-
-
+    border-top-left-radius:20px ;
 }
 
 .autor {
