@@ -58,6 +58,7 @@ h3 {
     font-size: 1.1rem;
     font-weight: 800;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.741);
+    cursor: pointer;
 }
 
 .fas{
@@ -72,7 +73,9 @@ h3 {
 
 .logo{
     max-width: 15%;
-
+}
+.logosize{
+    width: 10rem;
 }
 header {
     position: sticky;
@@ -98,6 +101,8 @@ header {
 .menu li {
     position: relative;
     font-size: 1.1rem;
+    display: flex;
+    align-items: center;
 }
 
 .menu>li a {
@@ -143,7 +148,7 @@ header {
 }
 
 header nav input[type=checkbox]:checked~.menu-md {
-    position: absolute;
+    position: relative;
     top: 25%;
     right: 0;
     left: 0;
@@ -151,7 +156,7 @@ header nav input[type=checkbox]:checked~.menu-md {
     flex-flow: column;
     align-items: flex-end;
     gap: .1em;
-    background: white;
+    background: var(--clr-pri);
     border-bottom-left-radius: 0.5em;
     animation: scale-in-ver-top 300ms both;
 }
@@ -177,7 +182,6 @@ header nav .menu-link:hover {
     header nav .menu-sm {
         display: none;
     }
-
     header nav .menu-md {
         display: flex;
         justify-content: flex-end;
@@ -185,7 +189,11 @@ header nav .menu-link:hover {
         font-size: 1rem;
     }
 }
-
+@media only screen and (max-width: 749px){
+    header .boton {
+        display: none;
+    }
+}
 /*-------------------------------HERO-----------------------*/
 .videoContainer {
     width: 100%;
@@ -411,12 +419,7 @@ header nav .menu-link:hover {
     grid-area: ourtitle;
 }
 .tcard {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 2em;
-    gap: 2em;
 }
 
 .tcard-graph {
@@ -504,6 +507,7 @@ header nav .menu-link:hover {
     text-decoration: underline;
 }
 /*-------------------------------RESPONSIVE GRIDS-------------------------------*/
+/* Tablet */
 @media (min-width:768px) and (max-width:1024px) {
     .tcard-grid{
         grid-template-areas:"knowtitle knowtitle"
@@ -512,9 +516,9 @@ header nav .menu-link:hover {
                             "ourtitle ourtitle"
                             "publication1 publication1"
                             "publication2 publication2";
-        gap: 6em;
     }
 }
+/* Mobile */
 @media (max-width:767px){
     .tcard-grid{
         grid-template-areas:"knowtitle"
