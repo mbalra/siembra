@@ -143,8 +143,11 @@ header {
 }
 
 .menu li:hover>ul {
-    display: block;
+    display: flex;
+    position: absolute;
     z-index: 10000;
+    flex-direction: column;
+    margin-top: 140px;
 }
 
 header nav input[type=checkbox]:checked~.menu-md {
