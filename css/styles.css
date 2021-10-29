@@ -172,8 +172,7 @@ header .logo {
 }
 
 .videoIndexLogo {
-    width: 1005px;
-    height: 314px;
+    width: 50vw;
     text-align: center;
 }
 
@@ -182,7 +181,7 @@ header .logo {
     position: absolute;
     width: 95%;
     display: flex;
-    height: 1080px;
+    height: 120vh;
     justify-content: center;
     align-items: center;
 }
