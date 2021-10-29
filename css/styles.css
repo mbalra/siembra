@@ -89,7 +89,7 @@ header {
     z-index: 999;
     align-items: center;
     box-shadow: 0 0 10px 0 black;
-    padding: .5em 5%;
+    padding: .5em 3%;
 }
 
 
@@ -255,7 +255,7 @@ header .logo {
 
 .scard-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 1.5em;
     margin: 2em;
 
@@ -283,8 +283,13 @@ header .logo {
     padding: 2em;
     border-end-end-radius: 20px;
     border-end-start-radius: 20px;
-
 }
+.scard-txt h3{
+ color: white;
+ font-size: 1.5rem;
+ font-weight: 300;
+}
+
 
 
 .scard-txt a {
@@ -516,8 +521,7 @@ footer {
     color: var(--clr-cla);
     justify-content: space-between;
     align-items: center;
-    height: 9em;
-    padding: 0em 2em;
+    padding: 2em 2em;
     width: 100%;
 }
 
