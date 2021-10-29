@@ -272,7 +272,7 @@ padding: .5em;
 
 .scard-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5em;
     margin: 2em;
 
@@ -356,6 +356,19 @@ padding: .5em;
     right: 20px;
     bottom: 5px;
 }
+
+@media  only screen and (max-width: 700px)  {
+    .secondcard h2 {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: .5em 0;
+    }
+    
+.secondcard {
+    gap: .8em;
+}
+  }
+  
 
 /*-------------------------------THIRD CARD-------------------------------*/
 .thirdcard {
