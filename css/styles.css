@@ -60,6 +60,15 @@ h3 {
     font-size: 2rem;
     color: var(--clr-pri);
 }
+/* Mobile */
+@media (max-width:767px) {
+    h2{
+        font-size: 1.25rem;
+    }
+    h3{
+        font-size: 1rem;
+    }
+}
 
 
 
@@ -529,13 +538,43 @@ padding: .5em;
 /* Mobile */
 @media (max-width:767px) {
     .tcard-grid {
-        grid-template-areas: "knowtitle"
-            "circular"
-            "bar"
-            "report"
-            "ourtitle"
-            "publication1"
-            "publication2";
+        grid-template-areas: "knowtitle knowtitle"
+            "circular bar"
+            "report report"
+            "ourtitle ourtitle"
+            "publication1 publication1"
+            "publication2 publication2";
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+    .tcard{
+        padding: 1vh;
+    }
+    .tcard-publication {
+        padding: 1vh;
+    }
+    .paragraphpublication{
+        font-size: 12px;
+    }
+    .tcard-publicationtxt {
+        gap: 2vh;
+        font-size: 11px;
+    }
+    .tcard-img {
+        width: 100vh;
+        height: 20vh;
+    }
+    .tcard-graph {
+        padding: 1vh;
+    }
+    .titlepublication{
+        font-size: 1;
+    }
+    .graphReport{
+        width: 15vh;
+        height: 15vh;
+    }
+    .tcard-txt1, .tcard-txt2 {
+        font-size: 1rem;
     }
 }
 
