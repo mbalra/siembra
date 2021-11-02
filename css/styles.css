@@ -667,3 +667,95 @@ footer {
 
     }
 }
+
+/* Register sections */
+.rcontainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.rfcard{
+    padding: 4vh;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    background: var(--clr-gra);
+    width: 100vw;
+    margin: 2vw;
+}
+.registerTop{
+    display: flex;
+    align-items: center;
+    gap: 2vh;
+}
+.circularPoint{
+    border-radius: 50%;
+    background-color: var(--clr-pri);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--clr-cla);
+    font-weight: 700;
+    font-size: 20px;
+}
+.registerContent{
+    display: flex;
+    gap:20px;
+    justify-content: center;
+}
+.registerImage{
+    border: var(--clr-pri) solid 2px;
+    width: 40rem;
+    height: 30rem;
+    border-radius: 15px;
+}
+.formContainer{
+    display: flex;
+    height: 30rem;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.inputContainer{
+    width: 40rem;
+    border: var(--clr-pri) solid 2px;
+    height: 4rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+.inputForm{
+    background-color: transparent;
+    border: none;
+    margin-left: 2rem;
+    font-size: 20px;
+    width: 90%;
+    color: black;
+    margin-top: 1rem;
+}
+.inputText{
+    background-color: var(--clr-cla);
+    bottom: 54px;
+    left: 25px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+::placeholder{
+    color: black;
+}
+.rscard{
+    padding: 4vh;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    background: var(--clr-gra);
+    width: 100vw;
+    margin: 2vw;
+}
