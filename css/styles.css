@@ -401,6 +401,7 @@ padding: .5em;
     justify-content: center;
     align-items: center;
     gap: 8em;
+    padding-bottom: 2em;
 }
 
 .tcard-grid {
