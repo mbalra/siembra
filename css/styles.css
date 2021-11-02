@@ -538,7 +538,7 @@ padding: .5em;
 
 /*-------------------------------RESPONSIVE GRIDS-------------------------------*/
 /* Laptop */
-@media (min-width:1025px) and (max-width:1500px) {
+@media (min-width:1025px) and (max-width:1680px) {
     .tcard {
         padding: 0px;
     }
