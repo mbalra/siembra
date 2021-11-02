@@ -544,10 +544,11 @@ padding: .5em;
     }
     .tcard-grid{
         grid-template-columns: repeat(auto-fit, minmax(10px, 1fr)); 
+        gap: 1em;
     }
 }
 /* Tablet */
-@media (min-width:768px) and (max-width:1024px) {
+@media (min-width:768px) and (max-width:1300px) {
     .tcard-grid {
         grid-template-areas: "knowtitle knowtitle"
             "circular bar"
