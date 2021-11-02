@@ -413,7 +413,6 @@ padding: .5em;
     text-align: center;
     gap: 2em;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    /* grid-template-columns: 20% 20% 40%; */
 }
 
 #tcard-circular {
@@ -538,6 +537,15 @@ padding: .5em;
 }
 
 /*-------------------------------RESPONSIVE GRIDS-------------------------------*/
+/* Laptop */
+@media (min-width:1025px) and (max-width:1500px) {
+    .tcard {
+        padding: 0px;
+    }
+    .tcard-grid{
+        grid-template-columns: repeat(auto-fit, minmax(10px, 1fr)); 
+    }
+}
 /* Tablet */
 @media (min-width:768px) and (max-width:1024px) {
     .tcard-grid {
