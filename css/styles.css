@@ -677,12 +677,12 @@ footer {
     }
 }
 
-/* Register sections */
+/*-------------------------------REGISTER SECTIONS-------------------------------*/
 .rcontainer{
     display: flex;
     justify-content: center;
     flex-direction: column;
-
+    align-items: center;
 }
 .rfcard{
     padding: 4vh;
@@ -691,7 +691,7 @@ footer {
     gap: 30px;
     justify-content: center;
     background: var(--clr-gra);
-    width: 100vw;
+    width: 90vw;
     margin: 2vw;
 }
 .registerTop{
@@ -718,21 +718,32 @@ footer {
 }
 .registerImage{
     border: var(--clr-pri) solid 2px;
-    width: 40rem;
-    height: 30rem;
+    width: 30vw;
+    height: 30vw;
     border-radius: 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 1rem;
 }
 .formContainer{
     display: flex;
-    height: 30rem;
     gap: 20px;
     flex-direction: column;
     justify-content: space-between;
 }
 .inputContainer{
-    width: 40rem;
+    width: 30vw;
     border: var(--clr-pri) solid 2px;
-    height: 4rem;
+    height: 6vh;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+.inputContainer-2{
+    width: 30vw;
+    border: var(--clr-pri) solid 2px;
+    height: 33.7vh;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -747,10 +758,37 @@ footer {
     margin-top: 1rem;
 }
 .inputText{
-    background-color: var(--clr-cla);
+    background-color: var(--clr-gra);
     bottom: 54px;
     left: 25px;
     width: 90px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.inputText-2{
+    background-color: var(--clr-gra);
+    bottom: 54px;
+    left: 25px;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.inputText-3{
+    background-color: var(--clr-gra);
+    bottom: 54px;
+    left: 25px;
+    width: 95px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.inputText-4{
+    background-color: var(--clr-gra);
+    bottom: 54px;
+    left: 25px;
+    width: 200px;
     display: flex;
     justify-content: center;
     position: relative;
@@ -765,6 +803,142 @@ footer {
     gap: 30px;
     justify-content: center;
     background: var(--clr-gra);
-    width: 100vw;
+    width: 90vw;
     margin: 2vw;
+}
+.inputContainerGrid{
+    border: var(--clr-pri) solid 2px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.btn-addregister{
+    background-color: var(--clr-pri);
+    color: var(--clr-cla);
+    width: 8vw;
+    height: 2vw;
+    border-radius: 7px;
+    font-size: 20px;
+    gap: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.containerAdd, .containerAddForm{
+    display: flex;
+    gap: 20px;
+}
+.containerAdd-1{
+    border: var(--clr-pri) solid 2px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 17.1vw;
+    height: 41.7vh;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 1rem;
+}
+.containerAdd-2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.inputContainerAdd-2{
+    border: var(--clr-pri) solid 2px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 12vw;
+    height: 20vh;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0.4rem;
+}
+/* Mobile */
+@media (max-width:767px) {
+    .registerContent{
+        flex-direction: column;
+        align-items: center;
+    }
+    .registerTop{
+        margin-left: 5vh;
+    }
+    .registerImage{
+        height: 30vh;
+        width: 35vh;
+    }
+    .btn-addregister{
+        font-size: 14px;
+        width: 10vh;
+        height: 4vh;
+    }
+    .inputContainer{
+        width: 70vw;
+        height: 6vh;
+        font-size: 12px;
+        justify-content: center;
+    }
+    .inputContainer-2{
+        width: 70vw;
+        font-size: 12px;
+    }
+    .inputText{
+        width: 60px;
+        bottom: 46px;
+    }
+    .containerAdd{
+        flex-direction: column;
+    }
+    .inputContainerAdd-2{
+        width: 12vh;
+        height: 13.7vh; 
+    }
+    .containerAdd-1{
+        height: 30vh;
+        width: 23vh;
+    }
+    .formContainer{
+        align-items: center;
+    }
+    .inputText-2{
+        bottom: 46px;
+        width: 121px;
+    }
+    .inputText-3{
+        bottom: 52px;
+        width: 80px;
+    }
+    .inputText-4{
+        bottom: 44px;
+        width: 150px;
+    }
+}
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .registerImage{
+        height: 50vw;
+        width: 35vw;
+    }
+    .inputContainer{
+        width: 35vw;
+    }
+    .btn-addregister{
+        width: 10vw;
+        height: 4vw;
+    }
+    .containerAdd-1{
+        width: 20vw;
+        height: 42vw;
+    }
+    .inputContainerAdd-2{
+        width: 15vw;
+        height: 20vw;
+    }
 }
