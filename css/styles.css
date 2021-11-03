@@ -60,6 +60,11 @@ h3 {
     font-size: 2rem;
     color: var(--clr-pri);
 }
+h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.5rem;
+    color: var(--clr-pri);
+}
 /* Mobile */
 @media (max-width:767px) {
     h2{
@@ -67,6 +72,9 @@ h3 {
     }
     h3{
         font-size: 1rem;
+    }
+    h4{
+        font-size: 0.75rem;
     }
 }
 
@@ -154,7 +162,22 @@ header nav .menu-link--active {
         font-size: 1.2rem;
     }
 }
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1000px) {
+    .menu-md{
+        font-size: 15px;
+    }
+}
 
+/* / Móviles en horizontal o tablets en vertical */
+@media (max-width: 767px) { 
+    .btn-pri{
+        padding: 0.8vw 1vw;
+    }
+    .logosize{
+        width: 44vw;
+    }
+}
 
 header .logo {
     flex: 1 0 150px;
@@ -166,7 +189,7 @@ header .logo {
 /*-------------------------------HERO-----------------------*/
 .videoContainer {
     width: 100%;
-    height: 100vh;
+    height: 50vw;
 }
 
 .videoIndex {
@@ -198,7 +221,7 @@ header .logo {
 /* Mobile */
 @media (max-width:767px) {
     .videoIndexLogo{
-        width: 30vh;
+        width: 40vw;
     }
     .videoContainer{
         height: 12vh;
@@ -207,7 +230,7 @@ header .logo {
 /* Tablet */
 @media (min-width:768px) and (max-width:1024px) {
     .videoContainer{
-        height: 25vh;
+        height: 40vw;
     }
 }
 /*-------------------------------FIRST CARD----------------------*/
@@ -407,10 +430,10 @@ padding: .5em;
 .tcard-grid {
     display: grid;
     grid-template-areas: "knowtitle knowtitle ourtitle ourtitle"
-        "circular bar publication1 publication1"
-        "circular bar publication1 publication1"
-        "circular bar publication2 publication2"
-        "report report publication2 publication2";
+        "circular bar publication publication"
+        "circular bar publication publication"
+        "circular bar publication publication"
+        "report report publication publication";
     text-align: center;
     gap: 2em;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -429,11 +452,7 @@ padding: .5em;
 }
 
 #tcard-publicationOne {
-    grid-area: publication1;
-}
-
-#tcard-publicationTwo {
-    grid-area: publication2;
+    grid-area: publication;
 }
 
 #tcard-know {
@@ -496,24 +515,29 @@ padding: .5em;
     text-decoration: underline;
     gap: 0.5em;
 }
-
-.tcard-publication {
-    display: flex;
-    flex-direction: row;
-    gap: 1em;
-    justify-content: center;
-    align-items: center;
+.tcard-publication{
     background: var(--clr-gra);
     color: var(--clr-pri);
     padding: 2em;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.07);
     border-radius: 15px;
+    gap: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.tcard-reaction {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     text-align: start;
+    gap: 2rem;
 }
 
 .tcard-img {
-    width: 45rem;
-    height: 20rem;
+    width: 15rem;
+    height: 15rem;
     display: flex;
 }
 
@@ -555,8 +579,7 @@ padding: .5em;
             "circular bar"
             "report report"
             "ourtitle ourtitle"
-            "publication1 publication1"
-            "publication2 publication2";
+            "publication publication";
     }
 }
 
@@ -567,8 +590,7 @@ padding: .5em;
             "circular bar"
             "report report"
             "ourtitle ourtitle"
-            "publication1 publication1"
-            "publication2 publication2";
+            "publication publication";
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
     .tcard{
@@ -583,16 +605,17 @@ padding: .5em;
     .tcard-publicationtxt {
         gap: 2vh;
         font-size: 11px;
+        text-align: initial;
+    }
+    .tcard-reaction{
+        flex-direction: column;
     }
     .tcard-img {
-        width: 100vh;
+        width: 40vw;
         height: 20vh;
     }
     .tcard-graph {
         padding: 1vh;
-    }
-    .titlepublication{
-        font-size: 1;
     }
     .graphReport{
         width: 15vh;
@@ -737,7 +760,7 @@ footer {
     width: 30vw;
     border: var(--clr-pri) solid 2px;
     height: 6vh;
-    border-radius: 8px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
 }
@@ -745,7 +768,7 @@ footer {
     width: 30vw;
     border: var(--clr-pri) solid 2px;
     height: 33.7vh;
-    border-radius: 8px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
 }
@@ -757,10 +780,21 @@ footer {
     width: 90%;
     color: black;
     margin-top: 1rem;
+    height: 90%;
+}
+.textareaForm{
+    background-color: transparent;
+    border: none;
+    margin-left: 2rem;
+    font-size: 20px;
+    width: 90%;
+    color: black;
+    margin-top: 1rem;
+    height: 90%;
 }
 .inputText{
     background-color: var(--clr-gra);
-    bottom: 54px;
+    bottom: 90%;
     left: 25px;
     width: 90px;
     display: flex;
@@ -769,7 +803,7 @@ footer {
 }
 .inputText-2{
     background-color: var(--clr-gra);
-    bottom: 54px;
+    bottom: 90%;
     left: 25px;
     width: 180px;
     display: flex;
@@ -778,7 +812,7 @@ footer {
 }
 .inputText-3{
     background-color: var(--clr-gra);
-    bottom: 54px;
+    bottom: 98%;
     left: 25px;
     width: 95px;
     display: flex;
@@ -787,7 +821,7 @@ footer {
 }
 .inputText-4{
     background-color: var(--clr-gra);
-    bottom: 54px;
+    bottom: 90%;
     left: 25px;
     width: 200px;
     display: flex;
@@ -806,13 +840,6 @@ footer {
     background: var(--clr-gra);
     width: 90vw;
     margin: 2vw;
-}
-.inputContainerGrid{
-    border: var(--clr-pri) solid 2px;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
 }
 .btn-addregister{
     background-color: var(--clr-pri);
@@ -833,7 +860,7 @@ footer {
 }
 .containerAdd-1{
     border: var(--clr-pri) solid 2px;
-    border-radius: 8px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -852,7 +879,7 @@ footer {
 }
 .inputContainerAdd-2{
     border: var(--clr-pri) solid 2px;
-    border-radius: 8px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -861,6 +888,30 @@ footer {
     justify-content: flex-end;
     align-items: flex-end;
     padding: 0.4rem;
+}
+.continueForm{
+    width: 90vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2vw;
+}
+.continueRegister{
+    border-radius: 15px;
+    background-color: var(--clr-sec);
+    color: var(--clr-gra);
+    border: var(--clr-sec);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 24px;
+    font-weight: 700;
+    width: 30vw;
+    height: 3vw;
+}
+/* Laptop */
+@media (min-width: 1200px) and (max-width: 1366px){
+    .inputText-4, .inputText, .inputText-2{
+        bottom: 54px;
+    }
 }
 /* Mobile */
 @media (max-width:767px) {
@@ -913,12 +964,20 @@ footer {
         width: 121px;
     }
     .inputText-3{
-        bottom: 52px;
+        bottom: 98%;
         width: 80px;
     }
     .inputText-4{
         bottom: 44px;
         width: 150px;
+    }
+    .continueForm{
+        justify-content: center;
+        padding: 4vw;
+    }
+    .continueRegister{
+        height: 12vw;
+        width: 70vw;
     }
 }
 /* Tablet */
@@ -928,19 +987,29 @@ footer {
         width: 35vw;
     }
     .inputContainer{
-        width: 35vw;
+        width: 37.5vw;
     }
     .btn-addregister{
-        width: 10vw;
+        width: 14vw;
         height: 4vw;
+        font-size: 16px;
     }
     .containerAdd-1{
         width: 20vw;
-        height: 42vw;
+        height: 40vw;
     }
     .inputContainerAdd-2{
         width: 15vw;
-        height: 20vw;
+        height: 18.5vw;
+        align-items: center;
+    }
+    .inputContainer-2{
+        height: 30vw;
+        width: 37.5vw;
+    }
+    .continueRegister{
+        width: 37.5vw;
+        height: 5vw;
     }
 }
 /*-----------------------------------PROYECTOS------------------*/
