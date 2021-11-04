@@ -794,7 +794,7 @@ footer {
 }
 .inputText{
     background-color: var(--clr-gra);
-    bottom: 90%;
+    bottom: 54px;
     left: 25px;
     width: 90px;
     display: flex;
@@ -913,6 +913,12 @@ footer {
         bottom: 54px;
     }
 }
+/* Laptop 1024px*/
+@media (min-width: 1024px) and (max-width:1024px)  and (min-height: 1366px) and (max-height: 1366px)  {
+     .inputText{
+        bottom: 90%;
+    }
+}
 /* Mobile */
 @media (max-width:767px) {
     .registerContent{
@@ -982,6 +988,8 @@ footer {
 }
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1199px) {
+   
+    
     .registerImage{
         height: 50vw;
         width: 35vw;
