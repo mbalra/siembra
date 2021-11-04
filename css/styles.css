@@ -1013,6 +1013,34 @@ footer {
     }
 }
 /*-----------------------------------PROYECTOS------------------*/
+
+.banerproy{
+    height: 100%;	
+	position: relative;
+}
+
+.banerproy img {
+	object-fit:cover;
+	width: 100%;
+	height: 100%;
+	transition: object-position 500ms ease-in-out;
+}
+
+@media  only screen and (max-width: 740px)  {
+    .banerproy{
+        height: 100%;	
+        position: relative;
+    }
+    
+    .banerproy img {
+        object-fit:contain;
+        width: 100%;
+        height: 100%;
+        transition: object-position 500ms ease-in-out;
+    }
+}
+
+
 .proy-contenedor{
     display: flex;
     flex-direction: column;
