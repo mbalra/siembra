@@ -807,7 +807,7 @@ footer {
 }
 .inputText-2{
     background-color: var(--clr-gra);
-    bottom: 90%;
+    bottom: 54px;
     left: 25px;
     width: 180px;
     display: flex;
@@ -825,7 +825,7 @@ footer {
 }
 .inputText-4{
     background-color: var(--clr-gra);
-    bottom: 90%;
+    bottom: 54px;
     left: 25px;
     width: 200px;
     display: flex;
@@ -917,9 +917,9 @@ footer {
         bottom: 54px;
     }
 }
-/* Laptop 1024px*/
+/* Ipad Pro 1024px*/
 @media (min-width: 1024px) and (max-width:1024px)  and (min-height: 1366px) and (max-height: 1366px)  {
-     .inputText{
+     .inputText, .inputText-4, .inputText-2{
         bottom: 90%;
     }
 }
