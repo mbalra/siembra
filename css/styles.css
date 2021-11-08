@@ -63,7 +63,6 @@ h3 {
 h4 {
     font-family: 'DM Sans', sans-serif;
     font-size: 1.5rem;
-    color: var(--clr-pri);
 }
 /* Mobile */
 @media (max-width:767px) {
@@ -551,6 +550,7 @@ padding: .5em;
     height: 100%;
     gap: 2rem;
     text-align: justify;
+    color: var(--clr-pri);
 }
 
 .paragraphpublication {
